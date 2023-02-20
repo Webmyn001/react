@@ -10,7 +10,7 @@ function Comments() {
 
   const deleteUser = async (id) => {
     try{
-      await axios.delete(`http://localhost:4000/api/comment/${id}`);
+      await axios.delete(`https://test-backend-seven.vercel.app/api/comment/${id}`);
       alert("Comment deleted.")
         }catch (err) 
     {
@@ -22,7 +22,7 @@ function Comments() {
   const [getcomments, setgetcomments] =useState([])
 
   const getComments = async ()=> {
-    axios.get("http://localhost:4000/api/comment/")
+    axios.get("https://test-backend-seven.vercel.app/api/comment/")
     .then((res)=> setgetcomments(res.data) )
     .catch((err)=> console.log(err))
     

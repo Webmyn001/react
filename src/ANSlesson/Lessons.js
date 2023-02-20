@@ -8,7 +8,7 @@ function Lessons() {
   const [data, setData] = useState([])
 
      const getList = async  () => {
-      axios.get("http://localhost:4000/api/lessons/get")
+      axios.get("https://test-backend-seven.vercel.app/api/lessons/get")
       .then(res => {
         console.log(res)
         setData(res.data)

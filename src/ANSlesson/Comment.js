@@ -53,7 +53,7 @@ console.log(Name, Level, Department)
   const [getcomments, setgetcomments] =useState([])
   console.log(getcomments)
   const getComments = async ()=> {
-    axios.get("http://localhost:4000/api/comment/")
+    axios.get("https://test-backend-seven.vercel.app/api/comment/")
     .then((res)=> setgetcomments(res.data) )
     .catch((err)=> console.log(err))
     
