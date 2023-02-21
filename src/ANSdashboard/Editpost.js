@@ -17,7 +17,7 @@ function Formdetails() {
   const {id} = useParams()
 
   const getInfobyId = async () => {
-    const response = await axios.get(`https://test-backend-seven.vercel.app/api/lessons/${id}`);
+    const response = await axios.get(`https://easy-tan-coati-wrap.cyclic.app/api/lessons/${id}`);
     setTitle(response.data.Title);
     setSubtitle(response.data.Subtitle);
     setBody1(response.data.Body1);
@@ -32,7 +32,7 @@ function Formdetails() {
     e.preventDefault();
    
 
-    axios.patch(`https://test-backend-seven.vercel.app/api/lessons/${id}`, {Title, Subtitle, Body1,
+    axios.patch(`https://easy-tan-coati-wrap.cyclic.app/api/lessons/${id}`, {Title, Subtitle, Body1,
     Body2, Body3, Body4})
     .then((res)=>
     { 

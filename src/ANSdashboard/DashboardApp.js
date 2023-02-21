@@ -12,7 +12,7 @@ import Homepage from "./Homepage";
      const [data, setData] = useState([])
 
      const getList = async  () => {
-      axios.get("https://test-backend-seven.vercel.app/api/lessons/get")
+      axios.get("https://easy-tan-coati-wrap.cyclic.app/api/lessons/get")
       .then(res => {
         console.log(res)
         setData(res.data)

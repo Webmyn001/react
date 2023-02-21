@@ -12,7 +12,7 @@ function Homepage(props) {
   // i want to do yes or no alert here
   alert("This lecture will be deleted")
   try{
-    await axios.delete(`https://test-backend-seven.vercel.app/api/lessons/${id}`);
+    await axios.delete(`https://easy-tan-coati-wrap.cyclic.app/api/lessons/${id}`);
     alert("Data deleted.")
     props.getList();
       }catch (err) 
