@@ -21,7 +21,7 @@ function Comment() {
    
 
 
-    axios.post(`http://localhost:4000/api/comment/addcomment`, {Name,School,Department,Level,Comment})
+    axios.post(`https://test-backend-seven.vercel.app/api/comment/addcomment`, {Name,School,Department,Level,Comment})
     .then((res)=>
     { 
     console.log("saved succesfully")
