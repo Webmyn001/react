@@ -1,14 +1,21 @@
 import React from 'react'
-import Header from './MakeitHalaal/Header'
+import Header from './ANSlesson/Header'
 import {BrowserRouter as Router , Route, Routes, } from "react-router-dom";
-import Form from './MakeitHalaal/Form/Form';
-import Home from './MakeitHalaal/Home';
-import Contact from './MakeitHalaal/Contact';
-import Footer from './MakeitHalaal/Footer';
-import DashboardApp from './MakeitHalaal/Dashboard/DashboardApp';
-import Fulldetails from './MakeitHalaal/Dashboard/Fulldetails';
-import Notfound from './MakeitHalaal/Notfound';
-import Update from './MakeitHalaal/Dashboard/Update';
+import Home from './ANSlesson/Home';
+import Footer from './ANSlesson/Footer';
+import Fulldetails from './ANSlesson/Fulldetails';
+import Lessons from './ANSlesson/Lessons';
+import About from './ANSlesson/About';
+import Comment from './ANSlesson/Comment';
+import DashboardApp from './ANSdashboard/DashboardApp';
+import Post from './ANSdashboard/Post';
+import Editpost from './ANSdashboard/Editpost';
+import Comments from './ANSdashboard/Comments';
+
+
+
+
+
 
 function App() {
   return (
@@ -17,17 +24,21 @@ function App() {
       <Header/>
       <Routes>
          <Route exact path="/" element = {<Home/>}></Route>
-         <Route exact path="/form" element = {<Form/>}></Route>
-         <Route exact path="/contact" element = {<Contact/>}></Route>
+         <Route exact path="/comment" element = {<Comment/>}></Route>
 
-         {/* dashboard */}
+         <Route exact path="/about" element = {<About/>}></Route>
+
+         <Route exact path="/lesson" element = {<Lessons/>}></Route>
+
+         <Route exact path="/fulldetails/:id" element = {<Fulldetails/>}></Route>
+                  
+                  
+                    {/* dashboard */}
          <Route exact path="/dashboard" element = {<DashboardApp/>}></Route>
-         <Route path = "/fulldetails/:id" exact element= {<Fulldetails/>}></Route>
-         <Route exact path="/update" element = {<Update/>}></Route>
-         
+         <Route exact path="/post" element = {<Post/>}></Route>
+         <Route exact path="dashboard/editpost/:id" element = {<Editpost/>}></Route>
+         <Route exact path="/Comments" element = {<Comments/>}></Route>
 
-         <Route path = "*"  element= {<Notfound/>}></Route>
-           
 
      
       </Routes>

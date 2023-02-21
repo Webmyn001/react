@@ -34,7 +34,7 @@ function Formdetails() {
     formData.append("Body4",Body4);
 
 
-    axios.post("https://test-backend-seven.vercel.app/api/lessons", formData)
+    axios.post("https://test-backend-seven.vercel.app/api/lessons/", formData)
     .then((res)=>
     { 
     console.log("saved succesfully")
