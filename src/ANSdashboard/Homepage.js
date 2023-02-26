@@ -36,8 +36,7 @@ function Homepage(props) {
                             <div  className="flex  bg-gradient-to-b  from-[#f3e1c1] to-[#fefbe9] flex-col rounded-lg items-center justify-center w-[400px] md:w-[500px]  shadow-2xl my-8 ">
 
                          
-                            <img src={`data:image/png;base64,${btoa(
-                         String.fromCharCode(...new Uint8Array(info.image1.data.data)))}`} 
+                            <img src={info.image1.url}
                              alt="..." className='rounded-lg object-cover py-4 w-[350px] md:w-[400px]' />
 
                               

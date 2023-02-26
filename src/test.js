@@ -136,3 +136,17 @@ console.log(master)
 }
 
 export default App;
+
+
+
+
+const formData = new FormData()
+
+    formData.append("Title",Title);
+    formData.append("Subtitle",Subtitle);
+    formData.append("Body1",Body1);
+    formData.append("Body2",Body2);
+    formData.append("Body3",Body3);
+    formData.append("image1",image1);
+    
+    formData.append("Body4",Body4);

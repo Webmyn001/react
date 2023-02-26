@@ -21,20 +21,10 @@ function Formdetails() {
   const saveForm = async (e) => {
     e.preventDefault();
      
-    const formData = new FormData()
-
-    formData.append("Title",Title);
-    formData.append("Subtitle",Subtitle);
-    formData.append("Body1",Body1);
-    formData.append("Body2",Body2);
-    formData.append("Body3",Body3);
-    formData.append("image1",image1);
-    formData.append("image2",image2);
-    formData.append("image3",image3);
-    formData.append("Body4",Body4);
+    
 
 
-    axios.post("https://easy-tan-coati-wrap.cyclic.app/api/lessons/", formData)
+    axios.post("https://easy-tan-coati-wrap.cyclic.app/api/lessons/", {Title,Subtitle,Body1,Body2,Body3,image1,Body4})
     .then((res)=>
     { 
     console.log("saved succesfully")
@@ -45,10 +35,24 @@ function Formdetails() {
       alert("Unable to submit form, kindly complete the form")
     })
     
-     
+    
   }
   
-   
+  // conversion of image to base64
+
+  const convertBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload = ()=>{
+        resolve(fileReader.result)
+      };
+      fileReader.onerror = (error) => {
+        reject(error)
+      };
+    })
+  }
 
 
 const Onchangetitle =(e)=> {
@@ -74,16 +78,27 @@ const OnchangeBody4 =(e)=> {
   setBody4(e.target.value)
 }
 
- const Onchangeimage1 = e => { 
-  setimage1(e.target.files[0]);
+ const Onchangeimage1 = async (e) => { 
+  const file = e.target.files[0];
+  const base64 = await convertBase64(file)
+  setimage1(base64);
+  
+ }
+ 
+ const Onchangeimage2 = async (e) => { 
+  const file = e.target.files[0];
+  const base64 = await convertBase64(file)
+  setimage2(base64);
+  
+ } 
+ const Onchangeimage3 = async (e) => { 
+  const file = e.target.files[0];
+  const base64 = await convertBase64(file)
+  setimage3(base64);
+  
  }
 
- const Onchangeimage2 = e => { 
-  setimage2(e.target.files[0]);
- }
- const Onchangeimage3 = e => { 
-  setimage3(e.target.files[0]);
- }
+ 
 console.log(Title, Subtitle, Body1, Body2, Body3,Body4)
   return (
     <div className='bg-gradient-to-t min-h-screen  from-white to-[#fffadd] '>
@@ -121,17 +136,16 @@ console.log(Title, Subtitle, Body1, Body2, Body3,Body4)
                 <input  type='file'  name='image1' onChange={Onchangeimage1}
                 className=" border-[#0b0f11] focus:outline-0 
                 sm:w-[400px] border-2 rounded-lg px-3 text-[#20201f]"/>
-
-              <label htmlFor='file'  className=" text-[#7f030d] py-2 font-semibold">Second image</label>
+                  <label htmlFor='file'  className=" text-[#7f030d] py-1 font-semibold ">2 image</label>
                 <input  type='file'  name='image2' onChange={Onchangeimage2}
                 className=" border-[#0b0f11] focus:outline-0 
-                sm:w-[400px] border-2  rounded-lg px-3 text-[#20201f]"/>
-
-             <label htmlFor='file'  className=" text-[#7f030d] py-2 font-semibold ">Third image</label>
+                sm:w-[400px] border-2 rounded-lg px-3 text-[#20201f]"/>
+                  <label htmlFor='file'  className=" text-[#7f030d] py-1 font-semibold ">3 image</label>
                 <input  type='file'  name='image3' onChange={Onchangeimage3}
                 className=" border-[#0b0f11] focus:outline-0 
-                sm:w-[400px] border-2 rounded-lg px-3 text-[#0f0e0c]"/>
-                    
+                sm:w-[400px] border-2 rounded-lg px-3 text-[#20201f]"/>
+
+            
                <label className=" text-[#7f030d] py-1 font-semibold pt-7">Conclusion</label>
                 <textarea  value={Body4} onChange={OnchangeBody4} 
                 className=" border-[#0b0f11] focus:outline-0

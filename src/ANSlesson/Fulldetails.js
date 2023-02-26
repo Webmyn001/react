@@ -38,7 +38,7 @@ function Fulldetails(props) {
 
                {/*  image1 */}
         <div className='pt-4'>
-         <img src={`data:image/png;base64,${changetoimage1}`} alt="..." className='object-cover
+         <img src={data.image1.url} alt="..." className='object-cover
            shadow-sm w-[350px] sm:h-[500px] sm:w-[600px]'/>
         </div>
                {/* body 3 */}
@@ -47,14 +47,14 @@ function Fulldetails(props) {
 
              {/* image2 */}
                <div className='pt-4'>
-         <img src={`data:image/png;base64,${changetoimage2}`} alt="..." className='object-cover
+         <img src={data.image2.url} alt="..." className='object-cover
            shadow-sm w-[350px] sm:h-[500px] sm:w-[600px]'/>
         </div>
 
         {/* image3 */}
 
         <div className='pt-8'>
-         <img src={`data:image/png;base64,${changetoimage3}`} alt="..." className='object-cover
+         <img src={data.image3.url} alt="..." className='object-cover
            shadow-sm w-[350px] sm:h-[500px] sm:w-[600px]'/>
         </div>
                         {/* body 4 conclusion */}

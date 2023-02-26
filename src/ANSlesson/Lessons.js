@@ -36,8 +36,7 @@ function Lessons() {
                              flex-col rounded-md items-center justify-center w-[400px] md:w-[500px]  shadow-2xl my-8 ">
 
                          
-              <img src={`data:image/png;base64,${btoa(
-              String.fromCharCode(...new Uint8Array(info.image1.data.data)))}`} 
+              <img src={info.image1.url}
               alt="..." className='rounded-md object-cover' />
 
                               
