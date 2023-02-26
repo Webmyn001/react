@@ -21,7 +21,7 @@ function Comment() {
    
 
 
-    axios.post(`https://easy-tan-coati-wrap.cyclic.app/api/comment/addcomment`,{Name,School,Department,Level,Comment})
+    axios.post(`https://gold-busy-beaver.cyclic.app/api/comment/addcomment`,{Name,School,Department,Level,Comment})
     .then((res)=>
     { 
     console.log("saved succesfully")

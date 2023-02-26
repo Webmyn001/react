@@ -24,7 +24,7 @@ function Formdetails() {
     
 
 
-    axios.post("https://easy-tan-coati-wrap.cyclic.app/api/lessons/", {Title,Subtitle,Body1,Body2,Body3,image1,Body4})
+    axios.post("https://gold-busy-beaver.cyclic.app/api/lessons/", {Title,Subtitle,Body1,Body2,Body3,image1,Body4})
     .then((res)=>
     { 
     console.log("saved succesfully")

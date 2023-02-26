@@ -10,7 +10,7 @@ function Comments() {
 
   const deleteUser = async (id) => {
     try{
-      await axios.delete(`https://easy-tan-coati-wrap.cyclic.app/api/comment/${id}`);
+      await axios.delete(`https://gold-busy-beaver.cyclic.app/api/comment/${id}`);
       alert("Comment deleted.")
         }catch (err) 
     {
@@ -22,7 +22,7 @@ function Comments() {
   const [getcomments, setgetcomments] =useState([])
 
   const getComments = async ()=> {
-    axios.get("https://easy-tan-coati-wrap.cyclic.app/api/comment/")
+    axios.get("https://gold-busy-beaver.cyclic.app/api/comment/")
     .then((res)=> setgetcomments(res.data) )
     .catch((err)=> console.log(err))
     

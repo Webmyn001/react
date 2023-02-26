@@ -32,7 +32,7 @@ function Formdetails() {
     e.preventDefault();
    
 
-    axios.patch(`https://easy-tan-coati-wrap.cyclic.app/api/lessons/${id}`, {Title, Subtitle, Body1,
+    axios.patch(`https://gold-busy-beaver.cyclic.app/api/lessons/${id}`, {Title, Subtitle, Body1,
     Body2, Body3, Body4})
     .then((res)=>
     { 
