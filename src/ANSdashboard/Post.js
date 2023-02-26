@@ -85,18 +85,7 @@ const OnchangeBody4 =(e)=> {
   
  }
  
- const Onchangeimage2 = async (e) => { 
-  const file = e.target.files[0];
-  const base64 = await convertBase64(file)
-  setimage2(base64);
-  
- } 
- const Onchangeimage3 = async (e) => { 
-  const file = e.target.files[0];
-  const base64 = await convertBase64(file)
-  setimage3(base64);
-  
- }
+ 
 
  
 console.log(Title, Subtitle, Body1, Body2, Body3,Body4)
@@ -136,14 +125,7 @@ console.log(Title, Subtitle, Body1, Body2, Body3,Body4)
                 <input  type='file'  name='image1' onChange={Onchangeimage1}
                 className=" border-[#0b0f11] focus:outline-0 
                 sm:w-[400px] border-2 rounded-lg px-3 text-[#20201f]"/>
-                  <label htmlFor='file'  className=" text-[#7f030d] py-1 font-semibold ">2 image</label>
-                <input  type='file'  name='image2' onChange={Onchangeimage2}
-                className=" border-[#0b0f11] focus:outline-0 
-                sm:w-[400px] border-2 rounded-lg px-3 text-[#20201f]"/>
-                  <label htmlFor='file'  className=" text-[#7f030d] py-1 font-semibold ">3 image</label>
-                <input  type='file'  name='image3' onChange={Onchangeimage3}
-                className=" border-[#0b0f11] focus:outline-0 
-                sm:w-[400px] border-2 rounded-lg px-3 text-[#20201f]"/>
+                
 
             
                <label className=" text-[#7f030d] py-1 font-semibold pt-7">Conclusion</label>

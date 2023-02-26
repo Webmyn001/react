@@ -8,22 +8,8 @@ function Fulldetails(props) {
     const data = location.state
     console.log(data)
     
-   const image1 = data.image1.data.data;
-   const image2 = data.image2.data.data;
-   const image3 = data.image3.data.data
-
-
-  const changetoimage1 =  btoa(
-    String.fromCharCode(...new Uint8Array(image1))
-  );
-
-  const changetoimage2 =  btoa(
-    String.fromCharCode(...new Uint8Array(image2))
-  );
-  const changetoimage3 =  btoa(
-    String.fromCharCode(...new Uint8Array(image3))
-  );
-
+   console.log(data.image1.url)
+  
 
   return (
     <div>
@@ -47,14 +33,14 @@ function Fulldetails(props) {
 
              {/* image2 */}
                <div className='pt-4'>
-         <img src={data.image2.url} alt="..." className='object-cover
+         <img src={data.image1.url} alt="..." className='object-cover
            shadow-sm w-[350px] sm:h-[500px] sm:w-[600px]'/>
         </div>
 
         {/* image3 */}
 
         <div className='pt-8'>
-         <img src={data.image3.url} alt="..." className='object-cover
+         <img src={data.image1.url} alt="..." className='object-cover
            shadow-sm w-[350px] sm:h-[500px] sm:w-[600px]'/>
         </div>
                         {/* body 4 conclusion */}
